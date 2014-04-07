@@ -29,6 +29,6 @@ public class Application {
 	}
 
 	private String render() {
-		return evaler.eval(runtime, "require 'json'; {:message=>'Hello'}.to_json").toString();
+		return evaler.eval(runtime, "require 'hello'; \"Hello (%s)\" % Hello::VERSION").toString();
 	}
 }
