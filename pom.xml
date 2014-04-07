@@ -4,11 +4,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.demo</groupId>
-	<artifactId>demo</artifactId>
+	<artifactId>jruby-test</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-
-	<name>jruby-sample</name>
-	<description>Demo project</description>
+    <packaging>pom</packaging>
+    <modules>
+      <module>lib</module>
+      <module>app</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -16,19 +18,7 @@
 		<version>1.0.2.BUILD-SNAPSHOT</version>
 	</parent>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.jruby</groupId>
-			<artifactId>jruby</artifactId>
-			<version>1.7.11</version>
-		</dependency>
-	</dependencies>
-
 	<repositories>
-		<repository>
-			<id>asciidoctor</id>
-			<url>http://dl.bintray.com/lordofthejars/maven</url>
-		</repository>
 		<repository>
 			<id>spring-snapshots</id>
 			<name>Spring Snapshots</name>
@@ -48,17 +38,7 @@
 	</repositories>
 
 	<properties>
-		<start-class>demo.Application</start-class>
 		<java.version>1.7</java.version>
 	</properties>
-
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
 
 </project>
